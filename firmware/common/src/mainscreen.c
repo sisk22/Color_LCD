@@ -1096,6 +1096,10 @@ void time(void) {
           ui_vars.ui16_battery_voltage_soc_x10 / 10,
           ui_vars.ui16_battery_voltage_soc_x10 % 10);
       break;
+
+    case 4:
+      fieldPrintf(&timeField, "%uC", ui_vars.ui8_motor_temperature);
+	  break;
   }
 #endif
 }

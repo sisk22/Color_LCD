@@ -179,7 +179,7 @@ static Field streetModeMenus[] =
 static Field displayMenus[] =
 		{
 #ifndef SW102
-  FIELD_EDITABLE_ENUM("Clock field", &ui_vars.ui8_time_field_enable, "disable", "clock", "batt SOC %", "batt volts"),
+  FIELD_EDITABLE_ENUM("Clock field", &ui_vars.ui8_time_field_enable, "disable", "clock", "batt SOC %", "batt volts", "temp"),
   FIELD_EDITABLE_UINT("Clock hours", &ui8_g_configuration_clock_hours, "", 0, 23, .onSetEditable = onSetConfigurationClockHours),
   FIELD_EDITABLE_UINT("Clock minutes", &ui8_g_configuration_clock_minutes, "", 0, 59, .onSetEditable = onSetConfigurationClockMinutes),
   FIELD_EDITABLE_UINT("Brightness on", &ui_vars.ui8_lcd_backlight_on_brightness, "", 5, 100, .inc_step = 5, .onSetEditable = onSetConfigurationDisplayLcdBacklightOnBrightness),
