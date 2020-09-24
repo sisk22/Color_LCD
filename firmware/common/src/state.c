@@ -269,7 +269,7 @@ void rt_send_tx_package(frame_type_t type) {
       ui8_usart1_tx_buffer[12] = rt_vars.ui8_motor_temperature_min_value_to_limit;
       ui8_usart1_tx_buffer[13] = rt_vars.ui8_motor_temperature_max_value_to_limit;
 
-      ui8_usart1_tx_buffer[14] = rt_vars.ui8_ramp_up_amps_per_second_x10;
+      ui8_usart1_tx_buffer[14] = rt_vars.ui8_ramp_up_amps_per_second;
 
       // TODO
       // target speed for cruise
@@ -665,8 +665,8 @@ void copy_rt_to_ui_vars(void) {
 	rt_vars.ui8_motor_max_current = ui_vars.ui8_motor_max_current;
 	rt_vars.ui8_motor_current_min_adc = ui_vars.ui8_motor_current_min_adc;
 	rt_vars.ui8_field_weakening = ui_vars.ui8_field_weakening;
-	rt_vars.ui8_ramp_up_amps_per_second_x10 =
-			ui_vars.ui8_ramp_up_amps_per_second_x10;
+	rt_vars.ui8_ramp_up_amps_per_second =
+			ui_vars.ui8_ramp_up_amps_per_second;
 	rt_vars.ui8_target_max_battery_power_div25 = ui_vars.ui8_target_max_battery_power_div25;
 	rt_vars.ui16_battery_low_voltage_cut_off_x10 =
 			ui_vars.ui16_battery_low_voltage_cut_off_x10;

@@ -34,7 +34,7 @@ const eeprom_data_t m_eeprom_data_defaults = {
   .ui8_motor_max_current = DEFAULT_VALUE_MOTOR_MAX_CURRENT,
   .ui8_motor_current_min_adc = DEFAULT_VALUE_CURRENT_MIN_ADC,
   .ui8_field_weakening = DEFAULT_FIELD_WEAKENING,
-  .ui8_ramp_up_amps_per_second_x10 = DEFAULT_VALUE_RAMP_UP_AMPS_PER_SECOND_X10,
+  .ui8_ramp_up_amps_per_second = DEFAULT_VALUE_RAMP_UP_AMPS_PER_SECOND,
   .ui16_battery_low_voltage_cut_off_x10 = DEFAULT_VALUE_BATTERY_LOW_VOLTAGE_CUT_OFF_X10,
   .ui8_motor_type = DEFAULT_VALUE_MOTOR_TYPE,
   .ui8_motor_current_control_mode = DEFAULT_VALUE_MOTOR_CURRENT_CONTROL_MODE,
@@ -345,8 +345,8 @@ void eeprom_init_variables(void) {
       m_eeprom_data.ui8_motor_current_min_adc;
   ui_vars->ui8_field_weakening =
       m_eeprom_data.ui8_field_weakening;
-	ui_vars->ui8_ramp_up_amps_per_second_x10 =
-			m_eeprom_data.ui8_ramp_up_amps_per_second_x10;
+	ui_vars->ui8_ramp_up_amps_per_second =
+			m_eeprom_data.ui8_ramp_up_amps_per_second;
 	ui_vars->ui16_battery_low_voltage_cut_off_x10 =
 			m_eeprom_data.ui16_battery_low_voltage_cut_off_x10;
 	ui_vars->ui8_motor_type = m_eeprom_data.ui8_motor_type;
@@ -603,8 +603,8 @@ void eeprom_write_variables(void) {
       ui_vars->ui8_motor_current_min_adc;
   m_eeprom_data.ui8_field_weakening =
       ui_vars->ui8_field_weakening;
-	m_eeprom_data.ui8_ramp_up_amps_per_second_x10 =
-			ui_vars->ui8_ramp_up_amps_per_second_x10;
+	m_eeprom_data.ui8_ramp_up_amps_per_second =
+			ui_vars->ui8_ramp_up_amps_per_second;
 	m_eeprom_data.ui16_battery_low_voltage_cut_off_x10 =
 			ui_vars->ui16_battery_low_voltage_cut_off_x10;
 	m_eeprom_data.ui8_motor_type = ui_vars->ui8_motor_type;
